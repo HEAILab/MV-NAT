@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Multi-View Domain Adaptation for Nighttime Aerial Tracking">
+  <meta name="keywords" content="UAV, Tracking, Domain Adaptation, Nighttime, Multi-View">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-View Domain Adaptation for Nighttime Aerial Tracking</title>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/misc.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Multi-View Domain Adaptation<br>for Nighttime Aerial Tracking</h1>
+            <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.ieee-ras.org/publications/ra-l"> RAL 2023</a></h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" href="https://haoyangli16.github.io/">Haoyang Li</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a target="_blank" href="https://george-zhuang.github.io/">Guangze Zheng</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a target="_blank" href="https://louis-leee.github.io/">Sihang Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://jay-ye.github.io/">Junjie Ye</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://scholar.google.com/citations?user=zmbMZ4kAAAAJ&hl=en">Changhong Fu</a><sup>1,*</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Tongji University,</span>
+              <span class="author-block"><sup>2</sup>The University of Hong Kong</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/your_paper.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/vision4robotics/MVDANT"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://your_dataset_link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">MVDANT</span> performs multi-view domain adaptation for nighttime aerial tracking with
+          high precision and robustness.
+        </h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/NVInXc2xWOk" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="container is-max-widescreen">
+
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We present a multi-view domain adaptation framework for nighttime aerial tracking named MVDANT. Our
+              approach addresses the challenges of adapting daytime tracking models to nighttime scenarios while
+              considering multiple viewpoints. MVDANT combines multi-view knowledge fusion, feature alignment, and
+              adversarial learning to bridge the gap between daytime and nighttime domains.
+            </p>
+            <p>
+              The framework includes a novel multi-view feature aligner with a transformer structure and a
+              Transformer-based hierarchical discriminator. These components work together to capture diverse
+              perspectives and lighting distribution knowledge, improving the robustness of tracking objects from
+              various views.
+            </p>
+            <p>
+              Our experimental results demonstrate superior performance on challenging nighttime UAV benchmarks, with
+              significant improvements in precision, normalized precision, and success rate compared to state-of-the-art
+              trackers.
+            </p>
+          </div>
+
+          <h2 class="title is-3">Introduction</h2>
+          <div class="content has-text-justified">
+            <p>
+              Visual tracking is a fundamental task in intelligent unmanned aerial systems, aiming to estimate the
+              location of an object in each frame given the initial state. It has widespread applications such as
+              autonomous landing, aerial manipulation operations, and self-localization. However, in low-light
+              conditions, the performance of existing trackers significantly degrades due to challenges like low
+              illumination, high-level noise, and low contrast. This makes nighttime aerial tracking a formidable
+              challenge.
+            </p>
+            <p>
+              Existing methods often rely on single-view information and neglect the significant differences in
+              viewpoint and motion pattern disparities across different views. Moreover, shadow occlusion, uneven
+              lighting distribution, and disruptive noise exacerbate multi-view feature differences at nighttime,
+              leading to missed targets or tracking failures.
+            </p>
+            <p>
+              To address these issues, we propose MVDANT, a domain adaptation framework that utilizes aerial multi-view
+              source domains for nighttime aerial tracking. By capturing images from multiple views in daytime
+              scenarios, we employ multi-view domain adaptation to narrow the gap between daytime and nighttime
+              conditions. This approach enhances the robustness and performance of UAV tracking in low-light
+              environments.
+            </p>
+          </div>
+
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our MVDANT framework addresses the challenges of nighttime aerial tracking by leveraging multi-view domain
+              adaptation. The key components of our method are:
+            </p>
+            <h3 class="title is-4">Feature Alignment</h3>
+            <p>
+              We introduce a multi-view feature aligner with a novel transformer structure. This aligner transforms
+              low-level features into high-level features by incorporating multi-view information and semantic cues,
+              improving feature extraction. The multi-view feature aligner consists of an encoder and decoder, which
+              aggregate inter-dependencies between various features and enhance view-invariant features with semantic
+              information.
+            </p>
+
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-fullwidth">
+                <img src="./images/feature_align.png" class="interpolation-image" alt="Multi-View Feature Aligner" />
+                <p style="text-align:center">Detailed workflow of the Multi-view feature aligner</p>
+              </div>
+              <div class="column is-fullwidth">
+                <img src="./images/heatmap.png" alt="Attribute-Based Performance" class="interpolation-image">
+                <p style="text-align:center">Attribute-Based Performance Analysis</p>
+              </div>
+            </div>
+
+            <h3 class="title is-4">Tracker Alignment</h3>
+            <p>
+              For each perspective, we employ discriminators to distinguish daytime images from nighttime images,
+              facilitating adversarial learning. By using a gradient reversal layer between the feature aligner and the
+              discriminator, we align the feature distributions of the source and target domains. This process helps the
+              model to generalize better to nighttime conditions.
+            </p>
+            <h3 class="title is-4">Overall Objective</h3>
+            <p>
+              The overall training loss of our framework combines classification and regression losses with adversarial
+              and consistency losses. This combination ensures that the model not only performs well on the tracking
+              task but also effectively adapts to the target domain. The consistency loss regularizes the tracker’s
+              prediction results for the same target image under different perspectives, further enhancing robustness.
+            </p>
+          </div>
+
+          <div class="column is-fullwidth">
+            <img src="./images/pipeline.png" class="interpolation-image" alt="MVDANT Overview" />
+            <p style="text-align:center">Overview of MVDANT</p>
+          </div>
+
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              We conducted comprehensive experiments on two challenging nighttime UAV benchmarks: NAT2021 and UAVDark70.
+              Our MVDANT framework demonstrates superior performance compared to state-of-the-art trackers in terms of
+              precision, normalized precision, and success rate.
+            </p>
+            <p>
+              <strong>Overall Performance:</strong> On the NAT2021-test set, MVDANT achieves a success rate of 0.483,
+              outperforming the baseline tracker by 2.6%. On the UAVDark70 dataset, MVDANT achieves a success rate of
+              0.496, which is a 1.2% improvement over the best-performing existing tracker.
+            </p>
+            <p>
+              <strong>Long-term Tracking Evaluation:</strong> To validate the effectiveness of our framework in
+              long-term tracking performance, we evaluated it on the NAT2021-L-test set. MVDANT outperformed the
+              runner-up by 7.1% in precision, 11.0% in normalized precision, and 5.9% in success rate, demonstrating its
+              robust performance in long-term tracking scenarios.
+            </p>
+            <p>
+              <strong>Attribute-Based Performance:</strong> We also assessed the robustness of our tracker against
+              specific challenges such as illumination variation, low resolution, fast motion, and viewpoint change.
+              MVDANT achieved a success rate of 0.521 for viewpoint change on UAVDark70 and 0.476 for fast motion on the
+              NAT2021-test, improving the existing best performance by approximately 4.3%.
+            </p>
+          </div>
+
+          <div class="column is-fullwidth">
+            <img src="./images/rainbow.png" class="interpolation-image" alt="Performance Comparison" />
+            <p style="text-align:center">Performance Comparison on Nighttime Aerial Tracking Benchmarks</p>
+          </div>
+
+          <h2 class="title is-3">Ablation Study</h2>
+          <div class="content has-text-justified">
+            <p>
+              To investigate the performance contributions of different components in MVDANT, we conducted ablation
+              studies. We compared variations of our framework with different modules activated, including the
+              adversarial multi-source domain adaptation (ADA), multi-view feature aligner (MFA), and tracker alignment
+              (TA).
+            </p>
+            <p>
+              The results indicate that adding the entire MVDANT framework improved the normalized precision and success
+              rate significantly compared to the baseline tracker. Specifically, the normalized precision increased by
+              26.67%, and the success rate increased by 32.01%, demonstrating the effectiveness of the added modules.
+            </p>
+            <div class="column is-fullwidth">
+              <img src="./images/attribute_1.png" class="interpolation-image" alt="Ablation Study Results" />
+              <p style="text-align:center">Ablation Study Results on NAT2021-L-test</p>
+            </div>
+            <div class="column is-fullwidth">
+              <img src="./images/attribute_2.png" class="interpolation-image" alt="Ablation Study Results" />
+              <p style="text-align:center">Ablation Study Results on NAT2021-L-test</p>
+            </div>
+          </div>
+
+          <h2 class="title is-3">Real-World Tests</h2>
+          <div class="content has-text-justified">
+            <p>
+              MVDANT was implemented on a typical embedded system, the NVIDIA Jetson AGX Xavier, to demonstrate its
+              applicability in nighttime drone tracking applications in the real world. Without TensorRT acceleration,
+              MVDANT achieves an impressive real-time speed of 31.25 frames per second (FPS). The following videos
+              showcase our real-world tests, demonstrating the robustness and effectiveness of MVDANT in various
+              nighttime tracking scenarios.
+            </p>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-one-third">
+              <video controls class="interpolation-image">
+                <source src="./images/test1__82pct_smaller.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="text-align:center">Real-World Test 1</p>
+            </div>
+            <div class="column is-one-third">
+              <video controls class="interpolation-image">
+                <source src="./images/test2__85pct_smaller.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="text-align:center">Real-World Test 2</p>
+            </div>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-one-third">
+              <video controls class="interpolation-image">
+              <source src="./images/test3__87pct_smaller.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+              <p style="text-align:center">Real-World Test 3</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{li2023multiview,
+  title={Multi-View Domain Adaptation for Nighttime Aerial Tracking},
+  author={Li, Haoyang and Zheng, Guangze and Li, Sihang and Ye, Junjie and Fu, Changhong},
+  journal={arXiv preprint arXiv:2310.12345},
+  year={2023}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
